@@ -1,0 +1,22 @@
+<!doctype HTML>
+<html>
+    <body>
+        <div id="myelement">Hello World!</div>
+        <ol id="my list">
+            <li>Element 1</li>
+            <li>Element 2</li>
+            <li>Element 3</li>
+        </ol>
+        <script>
+            document.body.onload = function(){
+                alert(document.getElementById('myelement').innerHTML);
+            };           
+            var mylist = document.getElementById('my list');
+            for( var i=0; i< mylist.childNodes.length; i++){
+                if(mylist.childNodes.item(i).nodeName == '#text'){
+                    console.log(mylist.childNodes.item(i));
+                }
+            } 
+        </script>
+    </body>
+</html>
